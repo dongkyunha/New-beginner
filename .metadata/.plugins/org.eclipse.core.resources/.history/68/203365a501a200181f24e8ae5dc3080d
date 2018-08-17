@@ -1,0 +1,29 @@
+public class WordScrambleEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] strArr = { "CHANGE", "LOVE", "HOPE", "VIEW"}; 
+
+        String answer = getAnswer(strArr); 
+        String question = getScrambledWord(answer); 
+
+        System.out.println("Question:"+question); 
+        System.out.println("Answer:"+answer); 
+  } // main 
+
+  public static String getAnswer(String[] strArr) { 
+       // 내용을 완성하세요.
+
+  } 
+  
+  public static String getScrambledWord(String str) { 
+        // 내용을 완성하세요.
+
+  } // scramble(String str) 
+
+[출처] [Java1000제]Word Scramble 1 - 단어 맞추기 (남궁성의 코드초보스터디(자바 java, c언어, javascript, python) |작성자 남궁성
+
+
+	}
+
+}

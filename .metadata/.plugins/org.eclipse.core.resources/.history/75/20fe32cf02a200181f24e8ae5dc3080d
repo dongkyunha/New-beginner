@@ -1,0 +1,78 @@
+import java.io.*;
+
+public class BaseballGame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+
+//BBArray class
+
+class BBArray {
+	private int myArray[];
+
+	public static int strike = 0, ball = 0;
+
+//---	생성자
+	public BBArray(int zero, int num) {
+		strike = 0; // 새게임을 할 경우 그 값이 남아 있으므로 이전값을 초기화
+		myArray = new int[num];
+		myArray[0] = (int) (Math.random() * 9) + 1; // 첫번째 자리수는 1~9
+
+		for (int i = 1; i < num; i++) // 두번째 자리부터 마지막 자리까지는...
+		{
+			if (zero == 1) // 0을 넣고 할 경우
+			{
+				myArray[i] = (int) (Math.random() * 10); // 0~9 사이의 수
+				int j = 0;
+				while (j < i) // i 번째 수가 이미 나온 수 인지를 검사
+				{
+					if (myArray[i] == myArray[j]) // i 번째 수가 이미나온 수라면..
+					{
+						myArray[i] = (int) (Math.random() * 10); // 다시 랜덤 생성하고
+						j = 0; // 검사를 다시 해야 하기 때문에 j 값을 초기화 한다.
+					} else
+						j++; // 다음 배열을 검사한다.
+				} // end while ( j < i )
+
+			} else // 0을 빼고 할 경우
+			{
+				myArray[i] = (int) (Math.random() * 9) + 1; // 1~9 사이의 수
+				int j = 0;
+				while (j < i) // i 번째 수가 이미 나온 수 인지를 검사
+				{
+					if (myArray[i] == myArray[j]) // i 번째 수가 이미나온 수라면..
+					{
+						myArray[i] = (int) (Math.random() * 9) + 1;
+						j = 0;
+					} else
+						j++;
+				} // end while ( j < i )
+			} // end if ( zero ??? )
+		} // end for
+	} // end 생성자
+
+	public void checkNum(int[] number, int num) // 입력값을 비교
+	{
+		strike = 0; // 누적값이므로 새로 사용할 때는 초기화
+		ball = 0;
+		for (int i = 0; i < num; i++) {
+			for (int j = 0; j < num; j++) {
+				if (i == j && myArray[i] == number[j]) // 자리수와 숫자가 같으면
+				{
+					strike++;
+				} else if (i != j && myArray[i] == number[j]) // 자리수는 틀리고 숫자가 같으면
+				{
+					ball++;
+				}
+			}
+		}
+		System.out.println("Strike : " + strike + "\tBall : " + ball);
+	} // end checkNum()
+} // end BBArray class

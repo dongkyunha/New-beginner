@@ -1,0 +1,24 @@
+public class WordScrambleEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] strArr = { "CHANGE", "LOVE", "HOPE", "VIEW", "APPLE", "WATER", "WHITE" };
+
+		String answer = getAnswer(strArr);
+		String question = getScrambledWord(answer);
+
+		System.out.println("Question:" + question);
+		System.out.println("Answer:" + answer);
+	} // main
+
+	public static String getAnswer(String[] strArr) {
+		// 내용을 완성하세요.
+
+	}
+
+	public static String getScrambledWord(String str) {
+		// 내용을 완성하세요.
+
+	} // scramble(String str)
+
+}
