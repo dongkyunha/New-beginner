@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="Parent"/>
+<fullyQualifiedTypeName name="javax.swing.event.InternalFrameListener"/>
+<fullyQualifiedTypeName name="java.lang.IncompatibleClassChangeError"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="outer.Staticinner"/>
+<fullyQualifiedTypeName name="outer.inner"/>
+<fullyQualifiedTypeName name="outer"/>
 </qualifiedTypeNameHistroy>

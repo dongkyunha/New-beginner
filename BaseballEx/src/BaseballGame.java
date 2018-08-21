@@ -21,7 +21,6 @@ public class BaseballGame {
 			System.out.print("'0'을 넣고 할래.. 빼고 할래..( 1, 넣고 한다  2, 빼고 한다 ).....? ");
 
 			try { // 입력을 안할 경우 발생할 예외처리
-
 				zero = Integer.parseInt(wi.readLine());
 
 				if (zero == 1 || zero == 2) // 값이 제대로 들어오면 실행하고...
